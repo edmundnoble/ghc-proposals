@@ -66,6 +66,10 @@ can be inherited across threads if using the provided ``forkChild`` combinator,
 which is fairly efficient. However, access to these values requires stack
 unwinding, which is not as efficient as the proposal included here.
 
+Tom Ellis's article ``Fork-fragile reader-like operations in Haskell`` provides
+additional examples of existing Haskell APIs where reader-like operations need
+to behave robustly across forking.
+
 Links:
 
 * ``thread-utils-context``:
@@ -74,6 +78,8 @@ Links:
   `https://hackage-content.haskell.org/package/hs-opentelemetry-api-0.3.0.0/docs/OpenTelemetry-Context-ThreadLocal.html <https://hackage-content.haskell.org/package/hs-opentelemetry-api-0.3.0.0/docs/OpenTelemetry-Context-ThreadLocal.html>`__
 * ``scoped-values-hs``:
   `https://github.com/Solonarv/scoped-values-hs/ <https://github.com/Solonarv/scoped-values-hs/>`__
+* ``Fork-fragile reader-like operations in Haskell``:
+  `https://h2.jaguarpaw.co.uk/posts/fork-fragile-reader-like-operations/ <https://h2.jaguarpaw.co.uk/posts/fork-fragile-reader-like-operations/>`__
 
 
 Proposed Change Specification
